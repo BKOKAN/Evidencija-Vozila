@@ -1,10 +1,10 @@
 public class Vozilo {
     private String registracijskiBroj;
     private String marka;
-    private int godinaProizvodnje;
+    private String godinaProizvodnje;
 
 
-    public Vozilo(String registracijskiBroj, int godinaProizvodnje, String marka){
+    public Vozilo(String registracijskiBroj, String godinaProizvodnje, String marka){
         this.registracijskiBroj = registracijskiBroj;
         this.godinaProizvodnje = godinaProizvodnje;
         this.marka = marka;
@@ -16,7 +16,7 @@ public class Vozilo {
         System.out.println("Registracijski broj: " + registracijskiBroj);
     }
 
-    public int getGodinaProizvodnje() {
+    public String getGodinaProizvodnje() {
         return godinaProizvodnje;
     }
 
