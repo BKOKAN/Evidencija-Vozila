@@ -49,7 +49,7 @@ public class Main {
 
                     try {
                         Automobil auto = new Automobil(regAuto, godAuto, markaAuto, brojVrata);
-                        dataVozila.add("Automobil;\n"+ regAuto+";\n"+ godAuto+";\n"+ markaAuto+";\n" + brojVrata + ";\n");
+                        dataVozila.add("Automobil;"+ markaAuto+";" + regAuto+";"+ godAuto+";"+ brojVrata + ";");
                         evidencija.spremiPodatkeUDatoteku(datoteka, dataVozila);
                     } catch (IllegalArgumentException e) {
                         System.out.println("Greška: " + e.getMessage());
@@ -67,7 +67,7 @@ public class Main {
                     String tipMotora = unos.nextLine();
 
                     Motocikl moto = new Motocikl(regMoto, godMoto, markaMoto, tipMotora);
-                    dataVozila.add("Motocikl:\n"+ markaMoto+";\n" +  regMoto+";\n"+ godMoto+";\n"+ tipMotora +";\n");
+                    dataVozila.add("Motocikl:"+ markaMoto+";" +  regMoto+";"+ godMoto+";"+ tipMotora +";");
                     evidencija.spremiPodatkeUDatoteku(datoteka, dataVozila);
                     break;
 

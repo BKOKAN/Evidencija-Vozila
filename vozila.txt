@@ -1,0 +1,2 @@
+Automobil;toyota;zg-3232-ds;1999;4;
+Motocikl:honda;zg-2323-ds;1999;sport;
