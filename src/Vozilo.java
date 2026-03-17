@@ -1,13 +1,21 @@
 public class Vozilo {
     private String registracijskiBroj;
     private String marka;
-    private String godinaProizvodnje;
+    private int godinaProizvodnje;
 
 
-    public Vozilo(String registracijskiBroj, String godinaProizvodnje, String marka){
-        this.registracijskiBroj = registracijskiBroj;
-        this.godinaProizvodnje = godinaProizvodnje;
-        this.marka = marka;
+    public Vozilo(String registracijskiBroj, int godinaProizvodnje, String marka){
+        if( godinaProizvodnje <=0){
+            throw new IllegalArgumentException("Godina proizvodnje mora biti pozitivan broj");
+        }
+            this.godinaProizvodnje = godinaProizvodnje;
+
+        if(registracijskiBroj.isEmpty() || marka.isEmpty()){
+            throw new IllegalArgumentException("Ovaj podatak je obavezan molim upisite primjeren podatak!");
+        }
+            this.registracijskiBroj = registracijskiBroj;
+            this.marka = marka;
+
     }
 
     public void prikaziPodatke(){
@@ -16,7 +24,7 @@ public class Vozilo {
         System.out.println("Registracijski broj: " + registracijskiBroj);
     }
 
-    public String getGodinaProizvodnje() {
+    public int getGodinaProizvodnje() {
         return godinaProizvodnje;
     }
 

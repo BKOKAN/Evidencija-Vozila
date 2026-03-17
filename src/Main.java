@@ -41,7 +41,7 @@ public class Main {
                     System.out.print("Registracijski broj: ");
                     String regAuto = unos.nextLine();
                     System.out.print("Godina proizvodnje: ");
-                    String godAuto = unos.nextLine();
+                    int godAuto = Integer.parseInt(unos.nextLine());
                     System.out.print("Marka: ");
                     String markaAuto = unos.nextLine();
                     System.out.print("Broj vrata: ");
@@ -60,7 +60,7 @@ public class Main {
                     System.out.print("Registracijski broj: ");
                     String regMoto = unos.nextLine();
                     System.out.print("Godina proizvodnje: ");
-                    String godMoto = unos.nextLine();
+                    int godMoto = Integer.parseInt(unos.nextLine());
                     System.out.print("Marka: ");
                     String markaMoto = unos.nextLine();
                     System.out.print("Tip motora: ");
@@ -76,10 +76,10 @@ public class Main {
                     for (String linija : dataVozila) {
                         String[] dijelovi = linija.split(";");
                         if (dijelovi[0].equals("Automobil")) {
-                            Automobil automobil = new Automobil(dijelovi[1], dijelovi[2], dijelovi[3], Integer.parseInt(dijelovi[4]));
+                            Automobil automobil = new Automobil(dijelovi[1], Integer.parseInt(dijelovi[2]), dijelovi[3], Integer.parseInt(dijelovi[4]));
                             automobil.prikaziPodatke();
                         } else if (dijelovi[0].equals("Motocikl")) {
-                            Motocikl motocikl = new Motocikl(dijelovi[1], dijelovi[2], dijelovi[3], dijelovi[4]);
+                            Motocikl motocikl = new Motocikl(dijelovi[1], Integer.parseInt(dijelovi[2]), dijelovi[3], dijelovi[4]);
                             motocikl.prikaziPodatke();
                         }
                         System.out.println("------");
